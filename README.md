@@ -1,76 +1,57 @@
-# Country Data API
+# RedX Delivery Areas
 
-A simple API that provides country, state, and city data. You can retrieve information about countries, their states, cities, and related details using this library.
+`redx-delivery-areas` is an NPM package that provides a list of delivery areas categorized by district names. You can easily retrieve area details, including names, postcodes, and zone IDs, using this package.
 
 ## Features
 
-- Get a list of all countries.
-- Get country names.
-- Get country details by country name.
-- Get cities by state names.
-- Get states by country name.
+- Get all delivery areas.
+- Filter areas by district name.
+- Retrieve area details, including postcodes and zones.
 
 ## Installation
 
 To install the package, run the following command:
 
 ```bash
-npm install country-data-api
-
-Get All Countries
-This method returns a list of all countries.
-
-
-import { getAllCountries } from 'country-data-api';
-
-const countries = getAllCountries();
-console.log(countries);
-
-=========================================================
-
-Get All Country Names
-This method returns an array of country names.
-
-import { getAllCountryNames } from 'country-data-api';
-
-const countryNames = getAllCountryNames();
-console.log(countryNames);
-
-=========================================================
-
-Get Country Details by Country Name
-This method returns the details of a country based on its name. If the country is found, it returns the details; otherwise, it returns undefined.
-
-import { getCountryDetailsByName } from 'country-data-api';
-
-const countryDetails = getCountryDetailsByName('Bangladesh');
-console.log(countryDetails);
-
-=========================================================
-
- Get Cities by State Names
- This method allows you to get the list of cities by state names. You can pass a single state name or an array of state names.
-
- import { getCitiesByStateNames } from 'country-data-api';
-
-// Get cities by a single state name
-const citiesInState = getCitiesByStateNames('Dhaka');
-console.log(citiesInState);
-
-// Get cities by an array of state names
-const citiesInStates = getCitiesByStateNames(['Dhaka', 'Chittagong']);
-console.log(citiesInStates);
-
-
-=========================================================
-
-Get States by Country Name
-
-import { getStatesByCountryName } from 'country-data-api';
-
-const statesInCountry = getStatesByCountryName('Bangladesh');
-console.log(statesInCountry);
-
-
+npm install redx-delivery-areas
 ```
-# redx-delivery-areas-npm
+
+## Usage
+
+### Get Areas by District Name
+
+This method returns an array of areas for a given district name.
+
+```typescript
+import { getAreasByDistrict } from "redx-delivery-areas";
+
+const dhakaAreas = getAreasByDistrict("Dhaka");
+console.log(dhakaAreas);
+```
+
+### Example Response
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Salimullah Road(Mohammadpur)",
+    "post_code": 1207,
+    "district_name": "Dhaka",
+    "division_name": "Dhaka",
+    "zone_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Dhanmondi - Road 3",
+    "post_code": 1209,
+    "district_name": "Dhaka",
+    "division_name": "Dhaka",
+    "zone_id": 1
+  }
+]
+```
+
+## License
+
+This package is licensed under the MIT License.

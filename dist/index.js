@@ -4,9 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const areas_json_1 = __importDefault(require("./data/areas.json"));
+const district_json_1 = __importDefault(require("./data/district.json"));
 // get areas by district name
 function getAreasByDistrict(districtName) {
     return areas_json_1.default.areas.filter((area) => area.district_name === districtName);
 }
-// Example usage
-console.log(getAreasByDistrict("Dhaka"));
+//get all district
+function getAllDistricts() {
+    return district_json_1.default;
+}
+// Example usage:
+console.log(getAllDistricts());

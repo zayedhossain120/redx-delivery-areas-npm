@@ -1,4 +1,5 @@
 import data from "./data/areas.json";
+import district from "./data/district.json";
 
 interface Area {
   id: number;
@@ -13,11 +14,18 @@ interface Data {
   areas: Area[];
 }
 
-// get areas by district name
+interface District {
+  id: number;
+  name: string;
+  division: string;
+}
 
+// get areas by district name
 function getAreasByDistrict(districtName: string): Area[] {
   return data.areas.filter((area: Area) => area.district_name === districtName);
 }
 
-// Example usage
-console.log(getAreasByDistrict("Dhaka"));
+//get all district
+function getAllDistricts(): District[] {
+  return district;
+}
