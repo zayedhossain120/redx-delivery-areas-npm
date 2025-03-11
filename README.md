@@ -1,12 +1,14 @@
-# RedX Delivery Areas
+# RedX Delivery Areas - Bangladesh Delivery Locations API
 
-`redx-delivery-areas` is an NPM package that provides a list of delivery areas categorized by district names. You can easily retrieve area details, including names, postcodes, and zone IDs, using this package.
+`redx-delivery-areas` is a NPM package that provides a comprehensive list of delivery areas across Bangladesh, categorized by district names. This package is ideal for e-commerce businesses, logistics companies, and developers who need structured location data, including area names, postcodes, and zone IDs.
 
 ## Features
 
-- Get all delivery areas.
-- Filter areas by district name.
-- Retrieve area details, including postcodes and zones.
+- 🚀 **Get all delivery areas** across Bangladesh.
+- 🔍 **Filter areas by district name** for precise location-based data.
+- 📌 **Retrieve area details**, including postcodes, zone IDs, and divisions.
+- 🌍 **Get a list of all districts in Bangladesh** with their respective divisions.
+- 📦 **Ideal for e-commerce, logistics, and location-based services.**
 
 ## Installation
 
@@ -18,7 +20,7 @@ npm install redx-delivery-areas
 
 ## Usage
 
-### Get Areas by District Name
+### 🔹 Get Areas by District Name
 
 This method returns an array of areas for a given district name.
 
@@ -29,7 +31,7 @@ const dhakaAreas = getAreasByDistrict("Dhaka");
 console.log(dhakaAreas);
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 [
@@ -52,6 +54,48 @@ console.log(dhakaAreas);
 ]
 ```
 
-## License
+### 🔹 Get All Districts
 
-This package is licensed under the MIT License.
+This method returns a list of all districts in Bangladesh with their divisions.
+
+```typescript
+import { getAllDistricts } from "redx-delivery-areas";
+
+const districts = getAllDistricts();
+console.log(districts);
+```
+
+#### Example Response
+
+```json
+[
+  { "id": 1, "name": "Bagerhat", "division": "Khulna" },
+  { "id": 2, "name": "Bandarban", "division": "Chittagong" },
+  { "id": 3, "name": "Barguna", "division": "Barisal" },
+  { "id": 4, "name": "Barisal", "division": "Barisal" },
+  { "id": 5, "name": "Bhola", "division": "Barisal" },
+  { "id": 6, "name": "Bogra", "division": "Rajshahi" },
+  { "id": 7, "name": "Brahmanbaria", "division": "Chittagong" },
+  { "id": 8, "name": "Chandpur", "division": "Chittagong" },
+  { "id": 9, "name": "Chapai Nawabganj", "division": "Rajshahi" },
+  { "id": 10, "name": "Chattogram", "division": "Chittagong" },
+  { "id": 11, "name": "Chuadanga", "division": "Khulna" },
+  { "id": 12, "name": "Comilla", "division": "Chittagong" },
+  { "id": 13, "name": "Cox's Bazar", "division": "Chittagong" },
+  { "id": 14, "name": "Dhaka", "division": "Dhaka" },
+  { "id": 15, "name": "Dinajpur", "division": "Rangpur" },
+  { "id": 16, "name": "Faridpur", "division": "Dhaka" },
+  { "id": 17, "name": "Feni", "division": "Chittagong" },
+  { "id": 18, "name": "Gaibandha", "division": "Rangpur" },
+  { "id": 19, "name": "Gazipur", "division": "Dhaka" },
+  { "id": 20, "name": "Gopalganj", "division": "Dhaka" }
+]
+```
+
+## 📜 License
+
+This package is licensed under the **MIT License**.
+
+## 🔗 Keywords & Tags
+
+`Bangladesh Delivery Areas`, `District-wise Areas`, `RedX API`, `Courier Service Data`, `Bangladesh Postcodes`, `Logistics API`, `E-commerce Delivery`, `NPM Package`, `Delivery Zones`, `Dhaka Delivery Areas`, `Bangladesh Districts`
