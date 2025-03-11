@@ -21,11 +21,11 @@ interface District {
 }
 
 // get areas by district name
-function getAreasByDistrict(districtName: string): Area[] {
+export function getAreasByDistrict(districtName: string): Area[] {
   return data.areas.filter((area: Area) => area.district_name === districtName);
 }
 
 //get all district
-function getAllDistricts(): District[] {
+export function getAllDistricts(): District[] {
   return district;
 }
