@@ -25,6 +25,11 @@ export function getAreasByDistrict(districtName: string): Area[] {
   return data.areas.filter((area: Area) => area.district_name === districtName);
 }
 
+// get area by area name
+export function getAreaByName(areaName: string): Area | undefined {
+  return data.areas.find((area: Area) => area.name === areaName);
+}
+
 //get all district
 export function getAllDistricts(): District[] {
   return district;

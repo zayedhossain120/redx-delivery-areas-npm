@@ -54,6 +54,30 @@ console.log(dhakaAreas);
 ]
 ```
 
+### 🔹 Get Area by Area Name
+
+This method returns a specific area based on its name.
+
+```typescript
+import { getAreaByName } from "redx-delivery-areas";
+
+const area = getAreaByName("Kabir Hat (Noakhali)");
+console.log(area);
+```
+
+#### Example Response
+
+```json
+{
+  "id": 2,
+  "name": "Kabir Hat (Noakhali)",
+  "post_code": 3811,
+  "district_name": "Noakhali",
+  "division_name": "Noakhali",
+  "zone_id": 1
+}
+```
+
 ### 🔹 Get All Districts
 
 This method returns a list of all districts in Bangladesh with their divisions.
